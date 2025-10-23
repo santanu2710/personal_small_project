@@ -33,5 +33,16 @@ bool type_of_roots(double a, double b, double c)
 
 int main()
 {
+    // variables and input taking from user;
+    double a,b,c;
+
+    cout << "enter coefficient of x2: ";
+    cin >> a;
+    cout << "enter coefficient of x1: ";
+    cin >> b;
+    cout << "enter coefficient of x0: ";
+    cin >> c;
+    
+
     return 0;
 }
