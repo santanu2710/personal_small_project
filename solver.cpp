@@ -4,6 +4,8 @@
 using namespace std;
 
 class complex{
+
+    public:
     double re, im;
 
     complex(double r, double i){
@@ -12,6 +14,7 @@ class complex{
     }
 };// complex type data structure for complex roots
 
+// discriminant calculator
 double d_calcu(double a, double b, double c)
 {
     return sqrt(abs(pow(b,2) - 4*a*c));
@@ -42,6 +45,20 @@ int main()
     cin >> b;
     cout << "enter coefficient of x0: ";
     cin >> c;
+
+    if (type_of_roots(a,b,c))
+    {
+        cout << "roots are real" << endl;
+        cout << "roots are " << (-b + d_calcu(a,b,c))/2 << " and " <<  (-b - d_calcu(a,b,c))/2 << endl;
+        return 0;
+    }
+    else{
+        cout << "roots are complex" << endl;
+
+        complex roots((-b/(2*a)), d_calcu(a,b,c)/(2*a));
+        cout << "roots are " << roots.re << "+" << roots.im << "i" << " and " <<  roots.re << "-" << roots.im << "i" << endl;
+    }
+    
     
 
     return 0;
