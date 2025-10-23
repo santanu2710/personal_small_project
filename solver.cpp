@@ -17,7 +17,10 @@ double d_calcu(double a, double b, double c)
     return sqrt(abs(pow(b,2) - 4*a*c));
 }
 
-bool d_calcu(double a, double b, double c)
+bool c_or_r(double a, double b, double c)
+{
+
+}
 
 int main()
 {
