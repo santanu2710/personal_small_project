@@ -54,17 +54,16 @@ int main()
         return 0;
     }
     
+    complex roots((-b/(2*a)), d_calcu(a,b,c)/(2*a));
 
     if (type_of_roots(a,b,c))
     {
         cout << "roots are real" << endl;
-        cout << "roots are " << (-b + d_calcu(a,b,c))/(2*a) << " and " <<  (-b - d_calcu(a,b,c))/(2*a) << endl;
+        cout << "roots are " << roots.re+roots.im << " and " <<  roots.re-roots.im << endl;
         return 0;
     }
     else{
         cout << "roots are complex" << endl;
-
-        complex roots((-b/(2*a)), d_calcu(a,b,c)/(2*a));
         cout << "roots are " << roots.re << "+" << roots.im << "i" << " and " <<  roots.re << "-" << roots.im << "i" << endl;
     }
     
