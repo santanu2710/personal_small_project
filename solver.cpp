@@ -46,10 +46,19 @@ int main()
     cout << "enter coefficient of x0: ";
     cin >> c;
 
+
+    // conditions
+    if (a==0)
+    {
+        cout <<  "not a quadratic equation" <<  endl;
+        return 0;
+    }
+    
+
     if (type_of_roots(a,b,c))
     {
         cout << "roots are real" << endl;
-        cout << "roots are " << (-b + d_calcu(a,b,c))/2 << " and " <<  (-b - d_calcu(a,b,c))/2 << endl;
+        cout << "roots are " << (-b + d_calcu(a,b,c))/(2*a) << " and " <<  (-b - d_calcu(a,b,c))/(2*a) << endl;
         return 0;
     }
     else{
@@ -59,7 +68,5 @@ int main()
         cout << "roots are " << roots.re << "+" << roots.im << "i" << " and " <<  roots.re << "-" << roots.im << "i" << endl;
     }
     
-    
-
     return 0;
 }
